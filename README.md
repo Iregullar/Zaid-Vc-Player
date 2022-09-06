@@ -40,9 +40,9 @@ Read All Commands
 
 # Deploy
 
-<p align="center"><a href="https://heroku.com/deploy">
-  <img src="https://img.shields.io/badge/Heroku%20Deploy-pink?style=for-the-badge&logo=heroku" width="325" height="50.100" /></a></p>
+## Heroku Deployment ❣️
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Iregullar/Zaid-Vc-Player)
 #
 <h2 align="center">
    Install Locally Or On A VPS
