@@ -17,7 +17,7 @@ A telegram Music bot Source Code By Using PyroGram Client
 
 <p align="center">Deploy with Cloner Bot</p>
 
-<p align="center"><a href="https://github.com/ITZ-ZAID/Zaid-Vc-Player/tree/clone"> <img src="https://img.shields.io/badge/Cloner%20Branch-blue?style=for-the-badge&logo=github" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://github.com/Iregullar/Zaid-Vc-Player/tree/clone"> <img src="https://img.shields.io/badge/Cloner%20Branch-blue?style=for-the-badge&logo=github" width="220" height="38.45"/></a></p>
 
 
 #
@@ -50,7 +50,7 @@ Read All Commands
 
 We Suggest To use Debian v-11 else ubuntu v-20+
 ```console
-$ git clone https://github.com/ITZ-ZAID/Zaid-Vc-Player
+$ git clone https://github.com/Iregullar/Zaid-Vc-Player
 $ cd Zaid-Vc-Player
 $ bash setup
 $ cp sample.env .env
