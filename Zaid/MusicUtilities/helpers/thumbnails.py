@@ -56,7 +56,7 @@ async def gen_thumb(thumbnail, title, userid, theme, ctitle):
     image3 = image11.crop((280,0,1000,720))
     #lum_img = Image.new('L', [720,720] , 0)
    # draw = ImageDraw.Draw(lum_img)
-   # draw.pieslice([(0,0), (720,720)], 0, 360, fill = 255, outline = "white")
+   # draw.pieslice([(0,0), (720,720)], 0, 360, fill = 255, outline = "Yellow")
    # img_arr =np.array(image3)
     #lum_img_arr =np.array(lum_img)
     #final_img_arr = np.dstack((img_arr,lum_img_arr))
@@ -81,9 +81,9 @@ async def gen_thumb(thumbnail, title, userid, theme, ctitle):
     image4.text((670, 332), text=title1[1], fill="red", font = font3, align ="left") 
 
     # description
-    views = f"Requester id: {userid}"
-    channel = f"Playing on : {ctitle}"
-    my = "Powered By Zaid"  
+    views = f"kişi id: {userid}"
+    channel = f"Oynatılıyor : {ctitle}"
+    my = "ManifestClan Tarafından Desteklenmektedir"  
 
     image4.text((670, 410), text=views, fill="yellow", font = font4, align ="left") 
     image4.text((670, 460), text=channel, fill="yellow", font = font4, align ="left")
