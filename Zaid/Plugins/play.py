@@ -56,7 +56,7 @@ def time_to_seconds(time):
         int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":")))
     )
 
-@Client.on_message(command(["play", "play@{BOT_USERNAME}"]))
+@Client.on_message(command(["oynat", "play@{BOT_USERNAME}"]))
 async def play(_, message: Message):
     chat_id = message.chat.id  
     if message.sender_chat:
@@ -120,7 +120,7 @@ async def play(_, message: Message):
     if audio:
         fucksemx = 1
         what = "Audio Searched"
-        mystic = await message.reply_text(f"**🔄 Processing Audio Given By {username}**")
+        mystic = await message.reply_text(f"**🔄 Tarafından Verilen Ses İşleme {username}**")
         if audio.file_size > 157286400:
             await mystic.edit_text("❌ Audio File Size Should Be Less Than 150 mb") 
             return
@@ -145,7 +145,7 @@ async def play(_, message: Message):
             else file_name,
         )
         title = "Selected Audio from Telegram"
-        link = "https://t.me/TheUpdatesChannel"
+        link = "https://t.me/BotDestekGrubu"
         thumb = "cache/audioplay.jpg"
         videoid = "smex1"
     elif url:
@@ -242,7 +242,7 @@ async def play(_, message: Message):
             return
         what = "Query Given"
         query = message.text.split(None, 1)[1]
-        mystic = await message.reply_text("**🔄 Searching**")
+        mystic = await message.reply_text("**🔄 Aranıyor**")
         try:
             a = VideosSearch(query, limit=5)
             result = (a.result()).get("result")
