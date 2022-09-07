@@ -61,7 +61,7 @@ async def stop_cmd(_, message):
         pass   
     await message.reply_text("Erased Databae, Queues, Logs, Raw Files, Downloads.")
     
-@app.on_message(filters.command("pause"))
+@app.on_message(filters.command("durdur"))
 async def pause_cmd(_, message): 
     if message.sender_chat:
         return await message.reply_text("You're an __Anonymous Admin__!\nRevert back to User Account.") 
@@ -77,9 +77,9 @@ async def pause_cmd(_, message):
         return await message.reply_text("I dont think if something's playing on voice chat")   
     await music_off(chat_id)
     await music.pytgcalls.pause_stream(chat_id)
-    await message.reply_text(f"🎧 Voicechat Paused by {checking}!")
+    await message.reply_text(f"🎧 Sesli sohbet Duraklatıldı {checking}!")
     
-@app.on_message(filters.command("resume"))
+@app.on_message(filters.command("devam"))
 async def stop_cmd(_, message): 
     if message.sender_chat:
         return await message.reply_text("You're an __Anonymous Admin__!\nRevert back to User Account.") 
@@ -96,9 +96,9 @@ async def stop_cmd(_, message):
     else:
         await music_on(chat_id)
         await music.pytgcalls.resume_stream(chat_id)
-        await message.reply_text(f"🎧 Voicechat Resumed by {checking}!")
+        await message.reply_text(f"🎧 Sesli sohbet Devam etti {checking}!")
 
-@app.on_message(filters.command(["stop", "end"]))
+@app.on_message(filters.command(["stop", "son"]))
 async def stop_cmd(_, message): 
     if message.sender_chat:
         return await message.reply_text("You're an __Anonymous Admin__!\nRevert back to User Account.") 
@@ -115,11 +115,11 @@ async def stop_cmd(_, message):
             pass                        
         await remove_active_chat(chat_id)
         await music.pytgcalls.leave_group_call(chat_id)
-        await message.reply_text(f"🎧 Voicechat End/Stopped by {checking}!") 
+        await message.reply_text(f"🎧 Sesli sohbeti Sonlandırıldı {checking}!") 
     else:
         return await message.reply_text("I dont think if something's playing on voice chat")
     
-@app.on_message(filters.command("skip"))
+@app.on_message(filters.command("atla"))
 async def stop_cmd(_, message): 
     if message.sender_chat:
         return await message.reply_text("You're an __Anonymous Admin__!\nRevert back to User Account.") 
@@ -131,7 +131,7 @@ async def stop_cmd(_, message):
     chat_id = message.chat.id
     chat_title = message.chat.title
     if not await is_active_chat(chat_id):
-        await message.reply_text("Nothing's playing on Music")
+        await message.reply_text("Müzikte hiçbir şey çalmıyor.")
     else:
         task_done(chat_id)
         if is_empty(chat_id):
